@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.files            += Dir.glob('test/**/*')
 
   s.add_dependency('activejob')
+  s.add_dependency('activesupport')
   s.add_development_dependency('minitest')
   s.add_development_dependency('redis-mutex')
   s.add_development_dependency('redis-semaphore')
