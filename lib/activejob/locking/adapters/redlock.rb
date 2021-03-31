@@ -17,6 +17,8 @@ module ActiveJob
         end
 
         def unlock
+          return unless self.lock_token
+
           self.lock_manager.unlock(self.lock_token.with_indifferent_access)
           self.lock_token = nil
         end
